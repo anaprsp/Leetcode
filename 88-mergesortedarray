@@ -1,3 +1,5 @@
+#time complexity O(n)
+#space complexity O(n)
 class Solution:
     def merge(self, nums1: List[int], m: int, nums2: List[int], n: int) -> None:
         """
@@ -17,7 +19,4 @@ class Solution:
                 nums1.append(nums2[p2])
                 p2 += 1
                 
-        if p1 < m:
-            nums1[p1 + p2:] = nums1_Copy[p1:]
-        if p2 < n:
-            nums1[p1 + p2:] = nums2[p2:]
+        nums1[p1 + p2:] = nums1_Copy[p1:] if (p1 < m) else nums2[p2:]
