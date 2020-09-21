@@ -1,3 +1,5 @@
+# time complexity O(n)
+# space complexity 0(n)
 class Solution:
 def reverse(self, x: int) -> int:
     if x >= 0:
