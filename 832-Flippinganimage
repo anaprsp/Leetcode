@@ -1,0 +1,24 @@
+#time complexity O(n^2), where n is the input
+#space complexity O(1)
+class Solution:
+    def flipAndInvertImage(self, A: List[List[int]]) -> List[List[int]]:
+
+        #flip an image horizontally
+        for i in range(len(A)):
+            flip = []
+            n = len(A[0])-1
+            while n >= 0:
+                flip.append(A[i][n])
+                n -= 1
+            A[i] = flip
+
+        #invert     
+        for j in range(len(A)):
+            m = 0
+            while m < len(A[0]):
+                if A[j][m] == 0:
+                    A[j][m] = 1
+                else:
+                    A[j][m] = 0
+                m += 1
+        return A
