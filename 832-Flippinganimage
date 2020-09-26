@@ -1,0 +1,15 @@
+#time complexity O(n^2), where n is len(A)
+#space complexity O(1) 
+class Solution:
+    def flipAndInvertImage(self, A: List[List[int]]) -> List[List[int]]:
+        n = len(A)
+        #flip an image horizontally
+        for i in range(n):
+            for y in range(n//2):
+                A[i][y], A[i][n-y-1] = A[i][n-y-1], A[i][y]
+       
+        #invert     
+        for j in range(n):
+            for k in range(n):
+                A[j][k] = 0 if A[j][k] == 1 else 1
+        return A
