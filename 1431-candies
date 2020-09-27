@@ -1,0 +1,9 @@
+#time complexity O(n), n is len(candies)
+#space complexity O(n), n is len(candies)
+class Solution:
+    def kidsWithCandies(self, candies: List[int], extraCandies: int) -> List[bool]:
+        greatList = []
+        maximo = max(candies)
+        for candy in candies:
+            greatList.append(candy + extraCandies >= maximo) 
+        return greatList
