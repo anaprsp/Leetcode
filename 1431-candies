@@ -3,7 +3,7 @@
 class Solution:
     def kidsWithCandies(self, candies: List[int], extraCandies: int) -> List[bool]:
         greatList = []
-        for i in range(len(candies)):
-            greatList.append(True) if (candies[i] + extraCandies >= max(candies)) else greatList.append(False)
+        maximo = max(candies)
+        for candy in candies:
+            greatList.append(candy + extraCandies >= maximo) 
         return greatList
-        
