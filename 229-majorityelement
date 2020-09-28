@@ -1,0 +1,19 @@
+#time complexity O(n), n is len(nums)
+#space complexity O(n), n is len(nums)
+class Solution:
+    def majorityElement(self, nums: List[int]) -> List[int]:
+        n = len(nums)//3
+        numList = []
+        numMap = {}
+        
+        for i in nums:
+            if i in numMap:
+                numMap[i] += 1
+            else:
+                numMap[i] = 1
+                
+        for j in numMap:
+            if numMap[j] > n:
+                numList.append(j)
+        return numList
+    
