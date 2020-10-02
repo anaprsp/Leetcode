@@ -11,14 +11,13 @@ class Solution:
         
         for letter in newParagraph:
             if letter == " " or letter.isalpha() == False:
-                if currWord != "":
-                    if currWord in numBanned:
-                        currWord = ""
-                        continue
-                    if currWord in wordMap:
-                        wordMap[currWord] += 1
-                    else:
-                        wordMap[currWord] = 1
+                if currWord == "" or currWord in numBanned:
+                    currWord = ""
+                    continue
+                elif currWord in wordMap:
+                    wordMap[currWord] += 1
+                else:
+                    wordMap[currWord] = 1
                 currWord = ""
             else:
                 currWord += letter
