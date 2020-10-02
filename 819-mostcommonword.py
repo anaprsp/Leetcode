@@ -3,7 +3,7 @@
 class Solution:
     def mostCommonWord(self, paragraph: str, banned: List[str]) -> str:
         newParagraph = paragraph.lower()+" "
-        numBanned = set(banned)
+        bannedSet = set(banned)
         mostFrequentWord = "" 
         currWord = ""
         wordMap = {}
