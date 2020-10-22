@@ -1,5 +1,5 @@
 #   Time Complexity O(n), where n is len(nums)
-#   Space Complexity 0(n)
+#   Space Complexity 0(1)
 class Solution:
     def productExceptSelf(self, nums):
         n = len(nums)
@@ -18,4 +18,3 @@ class Solution:
             p *= nums[outnum]
         
         return output
-        
