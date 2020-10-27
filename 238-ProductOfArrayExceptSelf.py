@@ -1,5 +1,7 @@
-#   Time Complexity O(n), where n is len(nums)
-#   Space Complexity 0(1)
+# Time Complexity O(n), where n is len(nums)
+# It's guaranteed that the product of the elements of any prefix or suffix of the array (including the whole array)
+# fits in a 32 bit integer
+# Space Complexity 0(1)
 class Solution:
     def productExceptSelf(self, nums):
         n = len(nums)
